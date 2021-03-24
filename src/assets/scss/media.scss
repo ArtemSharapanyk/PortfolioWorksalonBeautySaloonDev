@@ -52,6 +52,22 @@
     header .buttomLine {
         font-size: .35rem;
     }
+
+    .takeOrder .formSection{
+        width: 100%;
+
+        .optionBar{
+            width: 100% !important;
+        }
+
+        .info, form{
+            width: 50%;
+        }
+    }
+
+    .takeOrder{
+        background-size: cover !important;
+    }
 }
 
 @media screen and (max-width: 850px){
@@ -133,6 +149,13 @@
     .sServices .sliders .slide .card{
         font-size: .8em;
     }
+
+    .takeOrder .formSection{
+
+        .info, form{
+            width: 90%;
+        }
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -168,6 +191,13 @@
         margin-left: 5%;
         width: 75%;
     }
+
+    .takeOrder{
+        min-height: 70vh;
+        height: auto !important;
+    }
+
+    
 }
 
 @media screen and (max-width: 400px){

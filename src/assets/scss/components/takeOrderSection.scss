@@ -1,0 +1,163 @@
+.takeOrder{
+    height: 100vh;
+    font-size: .5em;
+    display: flex;
+    background-position: 10% !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background: url('/assets/img/madama.jpg');
+    background-color: #fff !important;
+    justify-content: flex-end;
+
+    .formSection{
+        width: 50%;
+        height: 100%;
+        background-color: rgba($active-color, .9);
+        padding: 8% 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        .info{
+            width: 80%;
+
+            h3{
+                font-size: 1.5em;
+                font-weight: 800;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            p{
+                font-size: .9em;
+                margin: 0;
+            }
+
+            .logo img{
+                width: 100px ;
+            }
+
+        }
+
+        form{
+            width: 80%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            .select{
+                position: relative;
+                cursor: pointer;
+
+
+                margin-top: 10px;
+
+                input{
+                    margin-top: 0;
+                    pointer-events: none;
+                }
+
+                &::after{
+                    content: '\f107';
+                    font-family: fontawesome;
+                    z-index: 100000;
+                    position: absolute;
+                    right: 10px;
+                    top: 15px;
+                    transform:  rotate(180deg);
+                    transition: .1s ease-in;
+                }
+                
+                &.openBarActive::after{
+                    transform:  rotate(0deg);
+                }
+            }
+
+            select{
+                display: none;
+            }
+
+            input{
+                width: 100%;
+                background-color: transparent !important;
+                padding: 15px 20px;
+                margin-top: 10px;
+                border: 1px solid rgba(0,0,0,.2);
+                color: #fff;
+                font-size: .8em;
+
+                border-bottom-width: 2px;
+
+                &::placeholder{
+                    color: #fff;
+                }
+
+                 
+            }   
+            
+            .optionBar.openBarActive{
+                opacity: 1;
+                pointer-events: all;
+            }
+            .optionBar{
+                position: absolute;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                width: 50vw;
+                height: 100%;
+                z-index: 100000;
+                background-color: #fff;
+                opacity: 0;
+                transition: .1s opacity ease-in;
+                transition: .2 transform ease-in;
+                pointer-events: none;
+
+                .myOption{
+                    color: #000;
+                    padding-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgba($active-color, .4)
+                    }
+                }
+            }
+
+
+            .btnBox{
+                justify-content: flex-start;
+                margin-top: 40px;
+            }
+
+            .btn{
+                background: #fff;
+                color: #000;
+                font-size: .8em;
+                letter-spacing: 1px;
+                font-weight: normal;
+                border-radius: 2px;
+            
+
+                padding: 15px 40px;
+
+                &::after{
+                    background-color: darken(#fff, 15);
+                }
+
+                &:hover{
+                    background-color: darken($color: #fff, $amount: 8%);
+                }
+            }
+        }
+    }
+}
+
