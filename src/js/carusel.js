@@ -90,19 +90,4 @@ export default () => {
 
     btnRight.addEventListener('click', moveSlideRight);
     btnLeft.addEventListener('click', moveSlideLeft);
-
-    //swipe adaptive
-    let slider = document.querySelector('.slider');
-
-    let x;
-    let y;
-
-    let touchStart = e => {
-        x = e.touches[0].clientX;
-        y = e.touches[0].clientY;
-
-        console.log(touches[0].clientX);
-    };
-
-    slider.addEventListener('touctstart', touchStart);
 }
