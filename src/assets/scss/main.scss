@@ -49,8 +49,8 @@ p{
 }
 
 header, section{
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     background-position: center center !important;
 }
 
@@ -78,6 +78,7 @@ section.overlay{
     &.inverse{
         &::before{
             background-color: $over;
+            opacity: 0.92;
         }
     }
 
@@ -90,7 +91,7 @@ section.overlay{
         position: absolute;
         top: 0;
         left: 0;
-        opacity: .92;
+        opacity: .8;
     }
 
     .wrapper{
@@ -158,5 +159,7 @@ nav{
 @import './components/services.scss';
 @import './components/kingSection.scss';
 @import './components/takeOrderSection.scss';
+@import './components/reviews.scss';
+@import './components/ourPartners.scss';
 
 @import './media.scss'

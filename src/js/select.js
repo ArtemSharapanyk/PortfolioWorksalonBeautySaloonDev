@@ -57,9 +57,7 @@ export default () => {
 
             changeMySelectPlaceholder(firtsOption.innerHTML)
             select.selectedIndex = firtsOption.innerHTML; 
-        }).finally(() => {
-            console.log(select.selectedIndex)
-        })
+        });
     };
        
     

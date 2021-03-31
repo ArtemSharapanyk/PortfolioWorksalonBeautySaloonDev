@@ -1,0 +1,107 @@
+.reviews{
+    min-height: 80vh;
+    font-size: .7rem;
+    padding: 5% 0;
+
+    h3{
+        margin: 0;
+        text-align: center;
+
+        span{
+            color: $active-color;
+        }
+    }
+
+    .reviewSlider{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 5%;
+
+        .quotes{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            font-size: .8em;
+            align-items: center;
+            color: $active-color;
+        }
+
+        .dots{
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .dot{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #fff;
+                margin-right: 15px;
+                transition: .1s ease-in;
+
+                &.active{
+                    background-color: $active-color;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                cursor: pointer;
+
+                &:hover{
+                    background-color: darken($color: #fff, $amount: 40);
+                }
+            }
+        }
+
+    
+    }
+
+    .review{
+        text-align: center;
+        font-size: .8em;
+        min-width: 90vw;
+        transition: .4s ease-in-out;
+        padding: 0 3%;
+
+        .stars{
+            color: $active-color;
+            font-size: .6em;
+
+            i{
+                margin-right: 7px;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        h4{
+            @include addFont(Dancing Script, 700);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .date{
+            font-size: .6em;
+            @include addFont(Dancing Script, 700);
+            margin: 0;
+            color: lighten($color: $grey-decorated, $amount: 10);
+            margin-bottom: 20px;
+        }
+        
+        p{
+            font-size: .8em;
+            color: lighten($color: $grey-decorated, $amount: 10);
+        }
+    }
+}

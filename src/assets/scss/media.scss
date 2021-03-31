@@ -2,6 +2,10 @@
     .sServices .sliders .slide .card {
         padding: 30px 15px;
     }
+
+    .ourPartners .sliderOurPartners .slides .slide{
+        min-width: 206px;
+    }
 }
 
 @media screen and (max-width: 1200px){
@@ -36,6 +40,16 @@
     }
 }
 
+@media screen and (max-width: 1115px){
+    // .ourPartners .sliderOurPartners img{
+    //     min-width: 110px;
+    // }
+    
+    .ourPartners .sliderOurPartners{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 992px){
     header .container {
         width: 40%;
@@ -67,6 +81,10 @@
 
     .takeOrder{
         background-size: cover !important;
+    }
+
+    .takeOrder .formSection .modalWindow{
+        width: 100%;
     }
 }
 
@@ -107,6 +125,14 @@
     header .descriptionText span.place {
         margin-bottom: 15px;
     } 
+
+    .reviews .reviewSlider .quotes{
+        display: none;
+    }
+
+    .reviews .review{
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -195,6 +221,10 @@
     .takeOrder{
         min-height: 70vh;
         height: auto !important;
+    }
+
+    .reviews .review{
+        font-size: 1em;
     }
 
     

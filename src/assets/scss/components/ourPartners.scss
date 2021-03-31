@@ -1,0 +1,19 @@
+.ourPartners{
+    background: url('/assets/img/bg-3.jpg');
+    padding: 5% 0;
+    font-size: .7rem;
+    text-align: center;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3{
+        color: $active-color;
+    }
+
+    
+    
+}
