@@ -1,12 +1,12 @@
 export default () => {
-    let btnLeft               = document.querySelector('.sServices .sliderBtnLeft');
-    let btnRight              = document.querySelector('.sServices .sliderBtnRight');
+    const btnLeft               = document.querySelector('.sServices .sliderBtnLeft');
+    const btnRight              = document.querySelector('.sServices .sliderBtnRight');
 
-    let sliderItems           = document.querySelectorAll('.sServices .slide');
-    let showsDefaulteSlides   = 3;
-    let activeSlidePageIndex  = 0;
-    let countOfMargin         = 0;
-    let numberOfMarginStatic  = 33.33333333333333;
+    const sliderItems           = document.querySelectorAll('.sServices .slide');
+    let   showsDefaulteSlides   = 3;
+    let   activeSlidePageIndex  = 0;
+    let   countOfMargin         = 0;
+    let   numberOfMarginStatic  = 33.33333333333333;
 
     if(screen.width <= 850){
         showsDefaulteSlides  = 2;
@@ -25,10 +25,7 @@ export default () => {
 
     
 
-    let checkRange = (func, isLeft = false) => {  
-        console.log(activeSlidePageIndex);
-        console.log(countOfMargin);
-        
+    let checkRange = (func, isLeft = false) => {      
         if(isLeft){
             if(activeSlidePageIndex == 0){
                 countOfMargin = -(sliderItems.length - showsDefaulteSlides) * numberOfMarginStatic;
@@ -40,7 +37,7 @@ export default () => {
                     item.style.transform = `translateX(${countOfMargin}vw)`;
                 });
     
-                return
+                return;
             }
         }
         else{
@@ -52,11 +49,11 @@ export default () => {
                     item.style.transform = `translateX(${0})`;
                 });
     
-                return
+                return;
             }
         }
 
-        func()
+        func();
     }
 
     let moveSlideRight = () => {    
@@ -69,11 +66,6 @@ export default () => {
                     item.style.transform = `translateX(${countOfMargin + 'vw'})`;
                 });
             });
-       
-
-        
-        console.log(countOfMargin);
-        console.log(activeSlidePageIndex)
     };
 
     let moveSlideLeft = () => {

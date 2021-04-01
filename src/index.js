@@ -6,14 +6,24 @@ import menu from './js/menu';
 import select from './js/select';
 import formSectonModalWindow from './js/formSectonModalWindow';
 import reviewsCarusel from './js/reviewsCarusel';
+import loader from './js/loader';
+import scrollUpBtn from './js/scrollUpBtn';
 
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    menu();
-    carusel();
-    select();
-    formSectonModalWindow();
-    reviewsCarusel();
+   new Promise((res => {
+        menu();
+        carusel();
+        select();
+        formSectonModalWindow();
+        reviewsCarusel();
+        scrollUpBtn()
+
+        res()
+   })).then(() => {
+        loader();
+   })
+    
 });

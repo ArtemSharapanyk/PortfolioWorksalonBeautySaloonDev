@@ -127,7 +127,12 @@ header{
                 }
 
                 a{
-                    color: #2c2c2c;
+                    
+                    i{
+                        color: #2c2c2c;
+                        margin: 0;
+                    }
+
                     font-size: .4rem;
                     display: flex;
                     justify-content: center;

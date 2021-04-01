@@ -1,17 +1,17 @@
 export default () => {
-    const select          = document.querySelector('select');
-    const selectOptions   = document.querySelectorAll('option');
-    const costomiseSelect = document.querySelector('.select');
-    const optionBar       = document.querySelector('.optionBar');
-    const mySelect        = document.querySelector('.select input');
-    let newOptions        = ``;
+    const select            = document.querySelector('select');
+    const selectOptions     = document.querySelectorAll('option');
+    const costomiseSelect   = document.querySelector('.select');
+    const optionBar         = document.querySelector('.optionBar');
+    const mySelect          = document.querySelector('.select input');
+    let   newOptions        = ``;
 
     const closeOpenOptionBar  = () => {
         optionBar.classList.toggle('openBarActive');
     };
 
     const changeMySelectPlaceholder = text => {
-        mySelect.value = text.trim()
+        mySelect.value = text.trim();
     };
 
     const setValueToOriginSelect = index => {
@@ -31,7 +31,7 @@ export default () => {
             Object.keys(selectOptions).forEach(item => {
                 const option = selectOptions[item];
 
-                newOptions += ` <div class="myOption" data-value='${option.value}'>${option.innerHTML}</div> `
+                newOptions += ` <div class="myOption" data-value='${option.value}'>${option.innerHTML}</div> `;
             });
 
             res();
@@ -53,7 +53,7 @@ export default () => {
                 });
             })
         }).then(() => {
-            let firtsOption = selectOptions[0];
+            const firtsOption = selectOptions[0];
 
             changeMySelectPlaceholder(firtsOption.innerHTML)
             select.selectedIndex = firtsOption.innerHTML; 

@@ -8,9 +8,10 @@ export default () => {
     menuBtn.addEventListener('click', () => {
         setTimeout(() => {
             menuBtn.classList.toggle('is-active');
-        }, 200)
+        }, 200);
+        
         darkBg.classList.toggle('activeMenu');
         header.classList.toggle('activeMenu');
-        body.classList.toggle('activeMenu')
+        body.classList.toggle('activeMenu');
     });
 }

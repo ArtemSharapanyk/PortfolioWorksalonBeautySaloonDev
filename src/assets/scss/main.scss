@@ -19,6 +19,10 @@ body{
     background-color: #000;
 }
 
+body.hideScroll{
+    overflow: hidden;
+}
+
 body::-webkit-scrollbar{
     width: 10px;
 }
@@ -29,6 +33,35 @@ body::-webkit-scrollbar-thumb {
 
 body.activeMenu{
     overflow: hidden;
+}
+.scrollUpBtn{
+    width: 50px;
+    height: 50px;
+    background-color: $grey-decorated;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1000000;
+    transition: .3s ease-in;
+    transform: translate(250%, 250%);
+    color: darken($color: $grey-decorated, $amount: 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    font-size: .7rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $active-color;
+        color: #fff;
+        opacity: 1;
+    }
+
+    &.active{
+        transform: translate(0,0)
+    }
 }
 
 a{
