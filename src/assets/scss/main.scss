@@ -54,6 +54,23 @@ header, section{
     background-position: center center !important;
 }
 
+header .buttomLine li, .infoItems{
+    &:last-child{
+       pointer-events: none;
+    }
+}
+
+a{
+    display: flex;
+    align-items: center;
+
+
+    i{
+        margin-right: 10px;
+        color: $grey-decorated;
+    }
+}
+
 .logo{
     display: flex;
     img{
@@ -122,35 +139,36 @@ nav{
     ul{
         width: 100%;
         padding-left: 10%;
-        li{
-            margin-top: 20px;
-            cursor: pointer;
+    }
+}
 
-            &:hover > a{
-                color: $active-color;
-            }
+nav ul li,.navItem{
+    margin-top: 20px;
+    cursor: pointer;
 
-            &:hover > a::before{
-                color: $active-color;
-            }
+    &:hover > a{
+        color: $active-color;
+    }
 
-            &:first-child{
-                margin-top: 0;
-            }
+    &:hover > a::before{
+        color: $active-color;
+    }
 
-            a{
-                color: darken($color: #fff, $amount: 40%);
-                &::before{
-                    content: '\f219';
-                    font-family: fontawesome;
-                    color: #fff;
-                    margin-right: 10px;
-                }
-            }
+    &:first-child{
+        margin-top: 0;
+    }
 
-            font-size: .350rem;
+    a{
+        color: darken($color: #fff, $amount: 40%);
+        &::before{
+            content: '\f219';
+            font-family: fontawesome;
+            color: #fff;
+            margin-right: 10px;
         }
     }
+
+    font-size: .350rem;
 }
 
 
@@ -161,5 +179,6 @@ nav{
 @import './components/takeOrderSection.scss';
 @import './components/reviews.scss';
 @import './components/ourPartners.scss';
+@import './components/footer.scss';
 
 @import './media.scss'

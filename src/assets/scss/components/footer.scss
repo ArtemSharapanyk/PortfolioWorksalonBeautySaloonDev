@@ -1,0 +1,97 @@
+footer{
+    padding: 5% 0;
+    background-color: #242424;
+    font-size: .5rem;
+    color: $grey-decorated;
+
+    .wrapper{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialAndInfo{
+        font-size: .7em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+
+        .social{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+
+            li{
+                width: 38px;
+                height: 38px;
+                background-color: $grey-decorated;
+                border-radius: 50%;
+                margin-right: 5px;
+
+                &:hover{
+                    background-color: lighten($color: $grey-decorated, $amount: 20);
+                }
+
+                a{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2em;
+
+                    i{
+                        color:lighten($color: $grey-decorated, $amount: 20);;
+                        margin: 0;
+                        transition: ease-in .3s;
+                    }
+
+                    &:hover > i{
+                        color: #fff;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .someServices{
+        li{
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .contactAndPositions{
+        position: relative;
+        li{
+            font-size: .7em;
+            margin-bottom: 5px;
+            line-height: 1.75;
+
+            &:last-child{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 0;
+                font-size: .9em;
+            }
+        }
+    }
+
+    .map{
+        background-color: #000;
+        grid-column: 4 / span 2;
+    }
+}

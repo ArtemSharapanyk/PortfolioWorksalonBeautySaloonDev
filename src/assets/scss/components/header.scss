@@ -267,22 +267,7 @@ header{
             height: 100%;
             padding: 0;
 
-            li{
-                &:last-child{
-                   pointer-events: none;
-                }
-            }
-
-            a{
-                display: flex;
-                align-items: center;
-
-
-                i{
-                    margin-right: 10px;
-                    color: $grey-decorated;
-                }
-            }
+            
         }
     }
 }

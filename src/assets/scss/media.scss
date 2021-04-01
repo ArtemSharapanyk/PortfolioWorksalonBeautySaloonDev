@@ -41,12 +41,26 @@
 }
 
 @media screen and (max-width: 1115px){
-    // .ourPartners .sliderOurPartners img{
-    //     min-width: 110px;
-    // }
-    
-    .ourPartners .sliderOurPartners{
-        width: 100%;
+    footer .wrapper{
+        grid-template-columns: repeat(6, 1fr);
+
+
+        .socialAndInfo{
+            grid-column: 1 / span 2;
+        }
+
+        .someServices{
+            grid-column: 3 / span 2;
+            
+        }
+
+        .contactAndPositions{
+            grid-column: 5 / span 2;
+
+            .phoneNumber{
+                font-size: .9em;
+            }
+        }
     }
 }
 
@@ -132,6 +146,43 @@
 
     .reviews .review{
         padding: 0;
+    }
+
+    footer{
+        font-size: .7rem;
+    }
+
+    footer .wrapper{
+        grid-template-rows:repeat(3, 1fr);
+        grid-template-columns: 1fr;
+
+
+        .socialAndInfo{
+            grid-column: initial;
+
+            .social{
+                position: static;
+                margin-top: 10px;
+            }
+        }
+
+        .someServices{
+            grid-column: initial;
+            font-size: .4rem;
+        }
+
+        .contactAndPositions{
+            grid-column: initial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            li{
+                &:last-child{
+                    position: static;
+                }
+            }
+        }
     }
 }
 
