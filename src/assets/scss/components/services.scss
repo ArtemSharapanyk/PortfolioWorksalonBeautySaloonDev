@@ -43,6 +43,24 @@
             display: flex;
             flex-direction: column;
             transition: .4s ease-out;
+            position: relative;
+
+
+
+            .cover{
+                opacity: .3;
+               &.red{
+                    background-color: #F86868 !important;
+               }
+
+               &.blue{
+                    background-color: #66C7CD !important;
+               }
+               
+               &.yellow{
+                background-color: #F9C766 !important;
+               }
+            }
 
             .card{
                 width: 100%;
