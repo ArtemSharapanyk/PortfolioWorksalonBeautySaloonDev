@@ -270,8 +270,11 @@
     }
 
     .takeOrder{
-        min-height: 70vh;
         height: auto !important;
+    }
+
+    .takeOrder .formSection{
+        min-height: 350px !important;
     }
 
     .reviews .review{
