@@ -1,13 +1,12 @@
 import './assets/scss/main.scss';
 import 'jquery';
 import './libs/fotorama/fotorama';
-import carusel from './js/carusel';
 import menu from './js/menu';
 import select from './js/select';
 import formSectonModalWindow from './js/formSectonModalWindow';
-import reviewsCarusel from './js/reviewsCarusel';
 import loader from './js/loader';
 import scrollUpBtn from './js/scrollUpBtn';
+import slider from './js/slider';
 
 
 
@@ -15,11 +14,23 @@ import scrollUpBtn from './js/scrollUpBtn';
 document.addEventListener('DOMContentLoaded', () => {
    new Promise((res => {
         menu();
-        carusel();
         select();
         formSectonModalWindow();
-        reviewsCarusel();
-        scrollUpBtn()
+        scrollUpBtn();
+        slider('base', '.sServices .sliderBtnLeft', '.sServices .sliderBtnRight', '.sServices .slide', 3,{
+           
+               '850': {
+                    slidesInPage: 2,
+                    operator: '<='
+               },
+               '650': {
+                    slidesInPage: 1,
+                    operator: '<='
+               } 
+          
+        }, '.slider.sServices');
+
+        slider('onlyDot', '', '', '.reviewSlider .review', 1, false,'.reviewSlider','.reviewSlider .dots .dot', 90)
 
         res()
    })).then(() => {
