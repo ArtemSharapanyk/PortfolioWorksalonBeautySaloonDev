@@ -71,6 +71,11 @@
     align-items: center;
     font-size: 1.2em;
     overflow: hidden;
+    transition: .3s ease-in;
+}
+
+.tab.activeSkill{
+    height: 20% !important;
 }
 .skills .activeSkill{
     background-color: #fff !important;
